@@ -7,6 +7,10 @@ html{
     padding: 1%;
 }
 
+p{
+    font-size: 21px;
+}
+
 #titulo{
     background-color: blue;
     margin: 5% 5% 5% 5%;
@@ -17,7 +21,7 @@ html{
 #acercaMi{
     background-color: blue;
     margin: 5% 5% 5% 5%;
-    padding:  5% 5% 5% 5%;
+    padding:  10%;
     border-radius: 30%;
     text-align: justify;
 }
