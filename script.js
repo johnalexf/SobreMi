@@ -1,32 +1,45 @@
 let imagenesCarrusel = [
     {
         alt :'Javascript',
-        src: '././imagenes/javascript.png'  
-    },{
+        src: './imagenes/javascript.png'  
+    },
+    {
         alt :'HTML',
-        src: '././imagenes/icons8-javascript-480.png'  
+        src: './imagenes/html.png'  
     },
     {
         alt :'CSS',
-        src: '././imagenes/icons8-javascript-480.png'  
+        src: '././imagenes/css.png'  
     },
     {
         alt :'PYTHON',
-        src: '././imagenes/icons8-javascript-480.png'  
+        src: '././imagenes/python.png'  
     }
 
 ]
 
-let posicion=0;
+let posicion = 0;
+let fondoCambiante = document.getElementById("cambioImagen")
 
-function ATRAS(){
+window.setInterval(function(){
+    posicion = (++posicion) % imagenesCarrusel.length ;
+    console.log(posicion)
+    //console.log(imagenesCarrusel[posicion].src)
+    fondoCambiante.setAttribute("src", imagenesCarrusel[posicion].src)
+  }, 2000);
+
+  function ATRAS(){
     posicion--;
+    if(posicion == -1){posicion=imagenesCarrusel.length-1}
+    console.log(posicion)
+    fondoCambiante.setAttribute("src", imagenesCarrusel[posicion].src)
 }
 
-function DELANTE(){
-    posicion = posicion++ % imagenesCarrusel.length;
-    let imagen = document.createElement(imagenesCarrusel[posicion])
-    document.getElementById("prueba2").appendChild(imagen);
 
+function delante(){
+    posicion = (++posicion) % imagenesCarrusel.length ;
+    console.log(posicion)
+    //console.log(imagenesCarrusel[posicion].src)
+    fondoCambiante.setAttribute("src", imagenesCarrusel[posicion].src)
 
 }
